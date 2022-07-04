@@ -1,4 +1,4 @@
-package com.jc.training.java.generics;
+package com.jc.training.java.streams;
 
 import java.util.stream.Stream;
 

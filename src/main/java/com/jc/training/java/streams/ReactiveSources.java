@@ -1,4 +1,4 @@
-package com.jc.training.java.generics;
+package com.jc.training.java.streams;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
