@@ -1,5 +1,7 @@
 package com.jc.training.java.streams;
 
+import reactor.core.publisher.Flux;
+
 import java.io.IOException;
 
 public class Exercise2 {
@@ -8,12 +10,18 @@ public class Exercise2 {
         // Use ReactiveSources.intNumbersFlux() and ReactiveSources.userFlux()
 
         // Print all numbers in the ReactiveSources.intNumbersFlux stream
-        // TODO: Write code here
+        Flux<Integer> integerFlux = ReactiveSources.intNumbersFlux();
+        integerFlux//.log()
+                .subscribe(System.out::println);
+        integerFlux.publish();
 
         // Print all users in the ReactiveSources.userFlux stream
-        // TODO: Write code here
+        Flux<User> userFlux = ReactiveSources.userFlux();
+        userFlux//.log()
+                .subscribe(System.out::println);
+        userFlux.publish();
 
         System.out.println("Press a key to end");
-        System.in.read();
+        System.out.println(System.in.read());
     }
 }
